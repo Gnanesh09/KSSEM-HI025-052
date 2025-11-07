@@ -1,1 +1,2 @@
-jfghrgehegwsyg
+def m1():
+    passs
