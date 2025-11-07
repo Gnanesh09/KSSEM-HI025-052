@@ -1,0 +1,24 @@
+{
+  "scan_status": "VERIFIED",
+  "farmer_details": {
+    "farmer_id": "FRM11072030",
+    "name": "UPDATE_FROM_YOUR_DOCUMENT",
+    "phone": "+91-0000000000",
+    "land_area_hectares": 2.5,
+    "district": "UPDATE_FROM_YOUR_DOCUMENT",
+    "crop_type": "Rice",
+    "verified_harvests": 0
+  },
+  "land_details": {
+    "survey_number": "UPDATE_FROM_YOUR_DOCUMENT",
+    "village": "UPDATE_FROM_YOUR_DOCUMENT",
+    "land_area_hectares": 2.5,
+    "land_area_raw": "2.5 Hectares",
+    "document_verified": true
+  },
+  "verification": {
+    "confidence_score": 100.0,
+    "all_fields_valid": true,
+    "timestamp": "2025-11-07 20:30:00"
+  }
+}
