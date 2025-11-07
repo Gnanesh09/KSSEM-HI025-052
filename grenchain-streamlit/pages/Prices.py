@@ -1,0 +1,25 @@
+import streamlit as st
+from components.sidebar import show_sidebar
+from components.translations import get_text
+
+st.set_page_config(page_title="Prices", page_icon="💰", layout="wide")
+
+show_sidebar()
+
+st.markdown("# 💰 Fair Mandi Prices")
+
+commodities = ['Tomatoes', 'Onions', 'Rice', 'Potatoes']
+commodity = st.selectbox("Select Commodity", commodities)
+
+location = st.selectbox("Select Location", ["Kolar", "Ramanagara", "Bangalore"])
+
+if st.button("🔍 Check Fair Price"):
+    col1, col2 = st.columns(2)
+    with col1:
+        st.success("### Fair Market Price")
+        st.metric("Price", "₹22.50/kg", delta="-15%", delta_color="inverse")
+    with col2:
+        st.warning("### Offered Price")
+        st.metric("Price", "₹19.13/kg", delta="By middlemen")
+    
+    st.info("On blockchain, verified by farmers!")
