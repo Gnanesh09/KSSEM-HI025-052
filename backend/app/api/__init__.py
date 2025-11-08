@@ -7,4 +7,4 @@ api_router = APIRouter()
 api_router.include_router(farmers.router)
 api_router.include_router(fields.router)
 api_router.include_router(insurance.router)
-api_router.include_router(satellite.router)  # ← Add this line
+# api_router.include_router(satellite.router)  # ← Add this line

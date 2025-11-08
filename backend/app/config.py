@@ -4,8 +4,9 @@ Application configuration
 Loads from .env file
 """
 from pydantic_settings import BaseSettings
-from typing import List
+from typing import List, Optional
 import os
+
 
 class Settings(BaseSettings):
     """Application settings"""
@@ -43,9 +44,15 @@ class Settings(BaseSettings):
     # Demo Mode
     DEMO_MODE: bool = True
     
+    # ✅ FIXED: Added type annotations
+    RAZORPAY_KEY_ID: str = os.getenv("RAZORPAY_KEY_ID", "rzp_test_Rd23t166egImN1")
+    RAZORPAY_KEY_SECRET: str = os.getenv("RAZORPAY_KEY_SECRET", "xay4I27wsQ6sjbYG1OQNXL9E")
+    UPI_ID: str = os.getenv("UPI_ID", "9591407733@naviaxis")
+    
     class Config:
         env_file = ".env"
         case_sensitive = True
+
 
 # Create settings instance
 settings = Settings()

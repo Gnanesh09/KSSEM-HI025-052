@@ -101,6 +101,19 @@ def get_all_blocks():
     }
 
 
+
+# Add this import
+from app.api.v1 import payments
+
+# Add this in the create_app function, after other routers:
+app.include_router(payments.router, prefix="/api/v1", tags=["Payments"])
+
+# In app/main.py, add after other imports:
+from app.api.v1 import credits
+
+# Add in create_app function after other routers:
+app.include_router(credits.router, prefix="/api/v1", tags=["Credits"])
+
 if __name__ == "__main__":
     import uvicorn
     uvicorn.run(app, host="0.0.0.0", port=8000)
